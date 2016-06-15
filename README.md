@@ -58,7 +58,7 @@ takes days to deploy, it is technically 'deployable', but not in a useful/pragma
 
 As a developer, what can you do to make your RoR applications "highly deployable"?
 
-There are many things you can do to make a RoR application "highly deployable. To list a few:
+There are many things you can do to make a RoR application "highly deployable". To list a few:
 - use Docker to ensure dependencies on your VM work the same in staging/production as they do in development
 - build a script to automate the installation of these dependencies
 - streamline the process of updating your secret keys/env vars by building a script or using an external 
