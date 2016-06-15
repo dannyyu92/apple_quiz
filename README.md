@@ -46,4 +46,26 @@ If we want only `.log` files again, we can add an `--include` flag like so...
 
 ### i
 
-To me, deployability means
+What does the term "deployability" mean to you?    
+
+To me, deployability refers to the ease that an application or system can be pushed to 
+another environment (ie: staging or production) while still maintaining the desired state. 
+Basically, if it breaks in this process, it is not 'deployable'. Deployability 
+also refers to the speed of which this new environment can be built when updated. So, if the application 
+takes days to deploy, it is technically 'deployable', but not in a useful/pragmatic way.
+
+### ii
+
+As a developer, what can you do to make your RoR applications "highly deployable"?
+
+There are many things you can do to make a RoR application "highly deployable. To list a few:
+- use Docker to ensure dependencies on your VM work the same in staging/production as they do in development
+- build a script to automate the installation of these dependencies
+- streamline the process of updating your secret keys/env vars by building a script or using an external 
+service
+- find ways to optimize the speed of the test suite (are we allocating too many objects? can we fine tune the 
+garbage collector? do tests depend on any external API calls which cause it to hang?)
+- ensure deploying is a one-step process by finding ways to automate certain processes (migrations, seeding, etc)
+- set up deployment management tools like Puppet/Chef/Ansible/etc
+- ensure there is a system of saved states/snapshots/rollbacks of source code, the VM, your database, etc incase the worst happens
+
