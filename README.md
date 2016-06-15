@@ -34,7 +34,13 @@ If nested subfolders are included: `find . -name '*.rb' -exec cat {} \;`
 
 ### C
 
-Challenge C: output lines containing timestamps of form 'YYYY-MM-DD HH:MM:SS'    
+Challenge C: output lines containing timestamps of form 'YYYY-MM-DD HH:MM:SS':    
+
+`grep -r "\d\{4\}-\d\{2\}-\d\{2\} \d\{2\}:\d\{2\}:\d\{2\}" .`
+
+If we want only `.log` files again, we can add an `--include` flag like so...
+
+`grep -r --include \*.log "\d\{4\}-\d\{2\}-\d\{2\} \d\{2\}:\d\{2\}:\d\{2\}" .`
 
 ## Q4
 
